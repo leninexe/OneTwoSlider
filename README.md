@@ -4,6 +4,15 @@ OneTwoSlider is an Android library for adding a customizable slider with either 
 ![screenshot](https://github.com/leninexe/OneTwoSlider/blob/master/screenshots/screenshot.png)
 
 ## Features
+While there exist several slider libs for Android which allow you to select values on a scale between a min and a max value they were hard to cusomize for my application and didn't support setting a second value. 
+
+OneTwoSlider allows you to easily customize the slider to meet your design requirements and also supports a second handle for selecting two values, e.g. for selecting a filter range.
+
+Additionally OneTwoSlider allows you to add conversion factors, which can be used to use an internal value range for your data structure but another value range for display - e.g. for kilometers to mile conversion.
+
+If it comes to labelling, OneTwoSlider supports floating values, which shows the selected value directly above the selection handle. The floating value can be customized in color, textsize and fontfamily.
+
+Reading out values is done by attaching a listener to the slider which is called every time when a selection value changes.
 
 ### Single Handle
 
