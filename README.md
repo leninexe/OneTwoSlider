@@ -38,7 +38,7 @@ OneTwoSlider can easily be integrated in your XML-Layout by using the following 
   />
 ```
 
-Initial values of the slider can set in code by using the following code.
+Initial values of the slider and the listener can set in code as follows.
 ```kotlin
 exampleSlider.setValues(18, 55)
 
