@@ -40,13 +40,13 @@ OneTwoSlider can easily be integrated in your XML-Layout by using the following 
 
 Initial values of the slider can set in code by using the following code.
 ```kotlin
-  exampleSlider.setValues(18, 55)
-  
-  firstSliderAge.setListener(object : Slider.SliderListener {
-      override fun valueChanged(minValue: Int, maxValue: Int?) {
-        // Do Something with the values 
-      }
-    })
+exampleSlider.setValues(18, 55)
+
+firstSliderAge.setListener(object : Slider.SliderListener {
+    override fun valueChanged(minValue: Int, maxValue: Int?) {
+      // Do Something with the values 
+    }
+  })
 ```
 
 The following attributes exist to customize the OneTwoSlider to fit your requirements.
