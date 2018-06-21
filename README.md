@@ -36,15 +36,47 @@ OneTwoSlider can easily be integrated in your XML-Layout by using the following 
   app:slider_max_suffix="+"
   app:slider_show_floating_values="true"
   />
+
+<at.leninexe.onetwosliderlib.Slider
+  android:id="@+id/otherSlider"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_margin="10dp"
+  app:layout_constraintTop_toTopOf="parent"
+  app:layout_constraintBottom_toBottomOf="parent"
+  app:slider_bar_color="#b3000000"
+  app:slider_selection_color="#d21e28"
+  app:slider_handle_drawable="@drawable/graphic_slider_handle"
+  app:slider_handle_width="21.7dp"
+  app:slider_handle_height="21.7dp"
+  app:slider_min_value="2"
+  app:slider_max_value="150"
+  app:slider_suffix="m"
+  app:slider_max_suffix="m+"
+  app:slider_show_floating_values="true"
+  app:slider_conversion_factor="0.621371"
+  app:slider_conversion_min_value="2"
+  app:slider_conversion_max_value="100"
+  />
 ```
 
 Initial values of the slider and the listener can set in code as follows.
 ```kotlin
-exampleSlider.setValues(18, 55)
+// Set value for a slider with only one handle
+exampleSlider.setValues(73)
+
+// Set values for a slider with two handles
+otherSlider.setValues(18, 55)
 
 firstSliderAge.setListener(object : Slider.SliderListener {
     override fun valueChanged(minValue: Int, maxValue: Int?) {
-      // Do Something with the values 
+      // Do Something with the value (one handle slider, maxValue is null)
+    }
+  })
+  
+otherSlider.setListener(object : Slider.SliderListener {
+    override fun valueChanged(minValue: Int, maxValue: Int?) {
+      // Do something with the values (two handle slider, maxValue is not null)
     }
   })
 ```
