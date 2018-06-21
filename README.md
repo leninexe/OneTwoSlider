@@ -14,7 +14,13 @@ If it comes to labelling, OneTwoSlider supports floating values, which shows the
 
 Reading out values is done by attaching a listener to the slider which is called every time when a selection value changes.
 
-## Download
+## Installation
+Using jitpack
+```groovy
+dependencies {
+  implementation 'com.github.leninexe:OneTwoSlider:1.0.0'
+}
+```
 
 ## Usage
 ### Integrate in layout file
