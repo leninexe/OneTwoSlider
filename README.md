@@ -109,6 +109,8 @@ slider_conversion_max_value | *empty string* | Max value for a converted floatin
 Out of a requirement that I had in a reasent project I integrated the possibility of adding conversion factors to OneTwoSlider. By doing so the displayed floating values are automatically calculated according to the provided conversion factor. 
 
 As an example think of a OneTwoSlider used for setting a maximum distance range. Internally we use kilometers for storing the selected maximum distance but in some countries we want to show the selected maximum distance in miles. By using `slider_conversion_factor` we can easily achieve, that the displayed floating value is automatically modified to the correct distance in miles. As we want to limit the minimum selectable distance to 2 kilometers and the maximum distance to 150 kilometers we would automatically display 1 (rounded to Int) as minimum and 93 as maximum selectable value in miles. As these are not perfect values (in our opinion) you can further tweak the displayed values with the attributes `slider_conversion_min_value` and `slider_conversion_max_value`, which we set to *2* and *100* in our case. By doing so, the value *2* was shown when the user slides to the minimum and the value *100* is shown, if the user slides to the maximum selectable value.
+ 
+The correct values for `slider_suffix` and `slider_max_suffix` are automatically shown in cases, where either the maximum value is selected or the `slider_conversion_max_value` is shown.
 
 ## License
 ```
