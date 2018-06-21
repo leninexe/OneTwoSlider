@@ -17,6 +17,7 @@ Reading out values is done by attaching a listener to the slider which is called
 ## Download
 
 ## Usage
+### Integrate in layout file
 OneTwoSlider can easily be integrated in your XML-Layout by using the following code.
 ```xml
 <at.leninexe.onetwosliderlib.Slider
@@ -59,7 +60,7 @@ OneTwoSlider can easily be integrated in your XML-Layout by using the following 
   app:slider_conversion_max_value="100"
   />
 ```
-
+### Set values and add listeners in kotlin code
 Initial values of the slider and the listener can set in code as follows.
 ```kotlin
 // Set value for a slider with only one handle
@@ -81,6 +82,7 @@ otherSlider.setListener(object : Slider.SliderListener {
   })
 ```
 
+### Custom attributes
 The following attributes exist to customize the OneTwoSlider to fit your requirements.
 
 Attribute Name | Default Value | Description
