@@ -45,8 +45,8 @@ class Slider : ConstraintLayout {
 
     context.obtainStyledAttributes(attrs, R.styleable.Slider).apply {
       val barHeight = getDimension(R.styleable.Slider_slider_bar_height, TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4f, resources.displayMetrics) /*4dp*/)
-      val barColor = ColorDrawable(getColor(R.styleable.Slider_slider_bar_color, context.getColor(R.color.defaultBarColor)))
-      val selectionColor = ColorDrawable(getColor(R.styleable.Slider_slider_selection_color, context.getColor(R.color.defaultSelectionColor)))
+      val barColor = ColorDrawable(getColor(R.styleable.Slider_slider_bar_color, context.getColor(R.color.default_bar_color)))
+      val selectionColor = ColorDrawable(getColor(R.styleable.Slider_slider_selection_color, context.getColor(R.color.default_selection_color)))
       val handleDrawable = getDrawable(R.styleable.Slider_slider_handle_drawable) ?: context.getDrawable(R.drawable.default_slider_handle)
       val handleWidth = getDimension(R.styleable.Slider_slider_handle_width, TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 24f, resources.displayMetrics))
       val handleHeight = getDimension(R.styleable.Slider_slider_handle_height, TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 24f, resources.displayMetrics))
@@ -67,7 +67,7 @@ class Slider : ConstraintLayout {
       setHandleWidth(handleWidth.toInt())
       setHandleHeight(handleHeight.toInt())
 
-      setFloatingLabelsTextcolor(getColor(R.styleable.Slider_slider_floating_values_textcolor, getColor(R.styleable.Slider_slider_selection_color, context.getColor(R.color.defaultSelectionColor))))
+      setFloatingLabelsTextcolor(getColor(R.styleable.Slider_slider_floating_values_textcolor, getColor(R.styleable.Slider_slider_selection_color, context.getColor(R.color.default_selection_color))))
       setFloatingLabelsTextsize(getDimension(R.styleable.Slider_slider_floating_values_textsize, TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 12f, resources.displayMetrics)))
 
       val fontRef = getResourceId(R.styleable.Slider_slider_floating_values_fontfamily, -1)
