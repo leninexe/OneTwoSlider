@@ -33,15 +33,15 @@ slider_handle_width | 24dp | Width of the slider handle
 slider_handle_height | 24dp | Height of the slider handle
 slider_min_value | 0 | Minimum value of the slider
 slider_max_value | 100 | Maximum value of the slider
-slider_suffix | <empty string> | String value that is used as suffix for floating values (if displayed)
-slider_max_suffix | <empty string> | String value that is used as suffix instead of slider_suffix for floating values if value is maximum value (if displayed)
+slider_suffix | *empty string* | String value that is used as suffix for floating values (if displayed)
+slider_max_suffix | *empty string* | String value that is used as suffix instead of slider_suffix for floating values if value is maximum value (if displayed)
 slider_show_floating_values | false | Set to true if you want to show floating values above the slider handle(s)
 slider_floating_values_textsize | 12sp | Textsize of the floating values (if displayed)
 slider_floating_values_textcolor | @color/default_selection_color | Textcolor of the floating values; if not explicitly set slider_selection_color is used (if displayed)
 slider_floating_values_fontfamily | default font | Typeface used for the floating values (if displayed)
 slider_conversion_factor | 1f | Conversion factor used for converting floating values from internal used values (if displayed)
-slider_conversion_min_value | <empty string> | Min value for a converted floating value (if displayed)
-slider_conversion_max_value | <empty string> | Max value for a converted floating value (if displayed)
+slider_conversion_min_value | *empty string* | Min value for a converted floating value (if displayed)
+slider_conversion_max_value | *empty string* | Max value for a converted floating value (if displayed)
 
 ## License
 ```
