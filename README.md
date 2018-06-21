@@ -1,4 +1,6 @@
 # OneTwoSlider
+[JitPack](https://jitpack.io/#leninexe/OneTwoSlider/1.0.0)
+
 OneTwoSlider is an Android library for adding a customizable slider with either one or two handles to your application. The library works with Android since SDK 23.
 
 ![screenshot](https://github.com/leninexe/OneTwoSlider/blob/master/screenshots/screenshot.png)
