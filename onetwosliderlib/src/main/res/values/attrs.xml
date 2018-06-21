@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Slider">
+        <attr name="slider_bar_height" format="dimension"/>
+        <attr name="slider_bar_color" format="color"/>
+        <attr name="slider_selection_color" format="color"/>
+
+        <attr name="slider_handle_drawable" format="reference"/>
+        <attr name="slider_handle_width" format="dimension"/>
+        <attr name="slider_handle_height" format="dimension"/>
+
+        <attr name="slider_min_value" format="integer"/>
+        <attr name="slider_max_value" format="integer"/>
+
+        <attr name="slider_suffix" format="string"/>
+        <attr name="slider_max_suffix" format="string"/>
+
+        <attr name="slider_show_floating_values" format="boolean"/>
+        <attr name="slider_floating_values_textsize" format="dimension"/>
+        <attr name="slider_floating_values_textcolor" format="color"/>
+        <attr name="slider_floating_values_fontfamily" format="reference"/>
+
+        <attr name="slider_conversion_factor" format="float"/>
+        <attr name="slider_conversion_min_value" format="integer"/>
+        <attr name="slider_conversion_max_value" format="integer"/>
+    </declare-styleable>
+</resources>

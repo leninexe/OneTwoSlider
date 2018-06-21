@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DemoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <at.leninexe.onetwosliderlib.Slider
+                android:id="@+id/firstSliderAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:slider_bar_color="#b3000000"
+                app:slider_selection_color="#d21e28"
+                app:slider_handle_drawable="@drawable/graphic_slider_handle"
+                app:slider_handle_width="21.7dp"
+                app:slider_handle_height="21.7dp"
+                app:slider_min_value="18"
+                app:slider_max_value="55"
+                app:slider_max_suffix="+"
+                app:slider_show_floating_values="true"
+                />
+
+            <at.leninexe.onetwosliderlib.Slider
+                android:id="@+id/firstSliderDistance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:slider_bar_color="#b3000000"
+                app:slider_selection_color="#d21e28"
+                app:slider_handle_drawable="@drawable/graphic_slider_handle"
+                app:slider_handle_width="21.7dp"
+                app:slider_handle_height="21.7dp"
+                app:slider_min_value="2"
+                app:slider_max_value="150"
+                app:slider_suffix="km"
+                app:slider_max_suffix="km+"
+                app:slider_show_floating_values="true"
+                />
+
+            <at.leninexe.onetwosliderlib.Slider
+                android:id="@+id/firstSliderDistanceConversion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:slider_bar_color="#b3000000"
+                app:slider_selection_color="#d21e28"
+                app:slider_handle_drawable="@drawable/graphic_slider_handle"
+                app:slider_handle_width="21.7dp"
+                app:slider_handle_height="21.7dp"
+                app:slider_min_value="2"
+                app:slider_max_value="150"
+                app:slider_suffix="m"
+                app:slider_max_suffix="m+"
+                app:slider_show_floating_values="true"
+                app:slider_conversion_factor="0.621371"
+                app:slider_conversion_min_value="2"
+                app:slider_conversion_max_value="100"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@android:color/black">
+
+            <TextView
+                android:id="@+id/lblSecondSliderAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14.3dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:textSize="14sp"
+                android:textColor="#ffffff"
+                android:lineSpacingExtra="6sp"
+                android:gravity="center_horizontal"
+                tools:text="18 - 24"
+                />
+
+            <at.leninexe.onetwosliderlib.Slider
+                android:id="@+id/secondSliderAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:slider_bar_color="#ffffff"
+                app:slider_selection_color="#00bc94"
+                app:slider_handle_drawable="@drawable/drawable_slider_handle"
+                app:slider_handle_width="20dp"
+                app:slider_handle_height="20dp"
+                app:slider_min_value="18"
+                app:slider_max_value="55"
+                app:slider_max_suffix="+"
+                />
+
+            <TextView
+                android:id="@+id/lblSecondSliderDistance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:textSize="14sp"
+                android:textColor="#ffffff"
+                android:lineSpacingExtra="6sp"
+                android:gravity="center_horizontal"
+                tools:text="50km"
+                />
+
+            <at.leninexe.onetwosliderlib.Slider
+                android:id="@+id/secondSliderDistance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:slider_bar_color="#ffffff"
+                app:slider_selection_color="#00bc94"
+                app:slider_handle_drawable="@drawable/drawable_slider_handle"
+                app:slider_handle_width="20dp"
+                app:slider_handle_height="20dp"
+                app:slider_min_value="2"
+                app:slider_max_value="150"
+                app:slider_suffix="km"
+                app:slider_max_suffix="km+"
+                />
+
+            <TextView
+                android:id="@+id/lblSecondSliderDistanceConversion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:textSize="14sp"
+                android:textColor="#ffffff"
+                android:lineSpacingExtra="6sp"
+                android:gravity="center_horizontal"
+                tools:text="50km"
+                />
+
+            <at.leninexe.onetwosliderlib.Slider
+                android:id="@+id/secondSliderDistanceConversion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:slider_bar_color="#ffffff"
+                app:slider_selection_color="#00bc94"
+                app:slider_handle_drawable="@drawable/drawable_slider_handle"
+                app:slider_handle_width="20dp"
+                app:slider_handle_height="20dp"
+                app:slider_min_value="2"
+                app:slider_max_value="150"
+                app:slider_suffix="m"
+                app:slider_max_suffix="m+"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
