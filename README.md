@@ -18,7 +18,7 @@ Reading out values is done by attaching a listener to the slider which is called
 
 ## Usage
 OneTwoSlider can easily be integrated in your XML-Layout by using the following code.
-```
+```xml
 <at.leninexe.onetwosliderlib.Slider
   android:id="@+id/exampleSlider"
   android:layout_width="match_parent"
@@ -39,7 +39,7 @@ OneTwoSlider can easily be integrated in your XML-Layout by using the following 
 ```
 
 Initial values of the slider can set in code by using the following code.
-```
+```kotlin
   exampleSlider.setValues(18, 55)
   
   firstSliderAge.setListener(object : Slider.SliderListener {
