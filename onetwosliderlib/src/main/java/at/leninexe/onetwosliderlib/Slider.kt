@@ -149,7 +149,7 @@ class Slider : ConstraintLayout {
     super.onMeasure(widthMeasureSpec, heightMeasureSpec)
 
     minPos = (root.paddingLeft + handle1.width / 2).toFloat()
-    maxPos = (root.right - (root.paddingRight + (handle1.width))).toFloat()
+    maxPos = (root.right - (root.paddingRight + handle1.width / 2)).toFloat()
 
     invalidate()
   }
