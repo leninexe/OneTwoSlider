@@ -148,10 +148,8 @@ class Slider : ConstraintLayout {
   override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
     super.onMeasure(widthMeasureSpec, heightMeasureSpec)
 
-    val lp = layoutParams as MarginLayoutParams
-
-    minPos = (lp.leftMargin + handle1.width / 2).toFloat()
-    maxPos = (width - (lp.rightMargin + handle1.width / 2)).toFloat()
+    minPos = (root.paddingLeft + handle1.width / 2).toFloat()
+    maxPos = (root.right - (root.paddingRight + (handle1.width))).toFloat()
 
     invalidate()
   }
