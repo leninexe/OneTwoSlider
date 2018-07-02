@@ -3,7 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/root">
+    android:id="@+id/root"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp"
+    android:clipToPadding="false"
+    android:clipChildren="false">
 
     <View
         android:id="@+id/bar"
@@ -40,18 +45,20 @@
         android:layout_marginTop="5dp"
         app:layout_constraintTop_toBottomOf="@id/floatingLabelSpacer"
         app:layout_goneMarginTop="0dp"
-        android:src="@drawable/default_slider_handle"
+        android:background="@drawable/default_slider_handle"
         android:scaleType="fitXY"
-        android:adjustViewBounds="true"/>
+        android:adjustViewBounds="true"
+        android:elevation="4dp"/>
 
     <ImageView
         android:id="@+id/handle2"
         android:layout_width="24dp"
         android:layout_height="24dp"
         app:layout_constraintTop_toTopOf="@+id/handle1"
-        android:src="@drawable/default_slider_handle"
+        android:background="@drawable/default_slider_handle"
         android:visibility="gone"
         android:scaleType="fitXY"
-        android:adjustViewBounds="true"/>
+        android:adjustViewBounds="true"
+        android:elevation="4dp"/>
 
 </android.support.constraint.ConstraintLayout>

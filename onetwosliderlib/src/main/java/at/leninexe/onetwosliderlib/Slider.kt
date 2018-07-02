@@ -8,6 +8,7 @@ import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.support.constraint.ConstraintLayout
 import android.support.v4.content.res.ResourcesCompat
+import android.support.v4.view.ViewCompat
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.MotionEvent
@@ -147,8 +148,10 @@ class Slider : ConstraintLayout {
   override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
     super.onMeasure(widthMeasureSpec, heightMeasureSpec)
 
-    minPos = (handle1.width / 2).toFloat()
-    maxPos = (width - handle1.width / 2).toFloat()
+    val lp = layoutParams as MarginLayoutParams
+
+    minPos = (lp.leftMargin + handle1.width / 2).toFloat()
+    maxPos = (width - (lp.rightMargin + handle1.width / 2)).toFloat()
 
     invalidate()
   }
@@ -399,8 +402,13 @@ class Slider : ConstraintLayout {
   }
 
   fun setHandleDrawable(drawable: Drawable) {
-    handle1.setImageDrawable(drawable)
-    handle2.setImageDrawable(drawable)
+    handle1.background = drawable
+    handle2.background = drawable
+
+    val elevation = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4f, resources.displayMetrics)
+
+    ViewCompat.setElevation(handle1, elevation)
+    ViewCompat.setElevation(handle2, elevation)
   }
 
   fun setHandleWidth(width: Int) {
