@@ -80,7 +80,12 @@ class Slider : ConstraintLayout {
       }
 
       // Section conversions
-      setConversionFactor(getFloat(R.styleable.Slider_slider_conversion_factor, 1f))
+      val defConversion = 1f
+      val conversionFactor = getFloat(R.styleable.Slider_slider_conversion_factor, defConversion)
+
+      if (conversionFactor != defConversion) {
+        setConversionFactor(conversionFactor)
+      }
 
       if (hasValue(R.styleable.Slider_slider_conversion_min_value)) {
         setConversionMinValue(getInt(R.styleable.Slider_slider_conversion_min_value, min))
@@ -461,7 +466,7 @@ class Slider : ConstraintLayout {
     invalidate()
   }
 
-  fun setConversionFactor(factor: Float) {
+  fun setConversionFactor(factor: Float?) {
     conversionFactor = factor
 
     invalidate()
