@@ -45,9 +45,9 @@ class Slider : ConstraintLayout {
 
     context.obtainStyledAttributes(attrs, R.styleable.Slider).apply {
       val barHeight = getDimension(R.styleable.Slider_slider_bar_height, TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4f, resources.displayMetrics) /*4dp*/)
-      val barColor = ColorDrawable(getColor(R.styleable.Slider_slider_bar_color, context.getColor(R.color.default_bar_color)))
-      val selectionColor = ColorDrawable(getColor(R.styleable.Slider_slider_selection_color, context.getColor(R.color.default_selection_color)))
-      val handleDrawable = getDrawable(R.styleable.Slider_slider_handle_drawable) ?: context.getDrawable(R.drawable.default_slider_handle)
+      val barColor = ColorDrawable(getColor(R.styleable.Slider_slider_bar_color, ResourcesCompat.getColor(resources, R.color.default_bar_color, null)))
+      val selectionColor = ColorDrawable(getColor(R.styleable.Slider_slider_selection_color, ResourcesCompat.getColor(resources, R.color.default_selection_color, null)))
+      val handleDrawable = getDrawable(R.styleable.Slider_slider_handle_drawable) ?: ResourcesCompat.getDrawable(resources, R.drawable.default_slider_handle, null)
       val handleWidth = getDimension(R.styleable.Slider_slider_handle_width, TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 24f, resources.displayMetrics))
       val handleHeight = getDimension(R.styleable.Slider_slider_handle_height, TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 24f, resources.displayMetrics))
 
@@ -62,12 +62,15 @@ class Slider : ConstraintLayout {
       setBarHeight(barHeight.toInt())
       setBarColor(barColor)
       setSelectionColor(selectionColor)
-      setHandleDrawable(handleDrawable)
+
+      if (handleDrawable != null) {
+        setHandleDrawable(handleDrawable)
+      }
 
       setHandleWidth(handleWidth.toInt())
       setHandleHeight(handleHeight.toInt())
 
-      setFloatingLabelsTextcolor(getColor(R.styleable.Slider_slider_floating_values_textcolor, getColor(R.styleable.Slider_slider_selection_color, context.getColor(R.color.default_selection_color))))
+      setFloatingLabelsTextcolor(getColor(R.styleable.Slider_slider_floating_values_textcolor, getColor(R.styleable.Slider_slider_selection_color, ResourcesCompat.getColor(resources, R.color.default_selection_color, null))))
       setFloatingLabelsTextsize(getDimension(R.styleable.Slider_slider_floating_values_textsize, TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 12f, resources.displayMetrics)))
 
       val fontRef = getResourceId(R.styleable.Slider_slider_floating_values_fontfamily, -1)
@@ -405,8 +408,9 @@ class Slider : ConstraintLayout {
     handle2.layoutParams = params2
 
     val barParams = bar.layoutParams as ConstraintLayout.LayoutParams
-    barParams.marginStart = (width / 2)
-    barParams.marginEnd = (width / 2)
+
+    barParams.leftMargin = (width / 2)
+    barParams.rightMargin = (width / 2)
     bar.layoutParams = barParams
   }
 
