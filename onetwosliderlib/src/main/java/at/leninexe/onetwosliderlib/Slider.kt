@@ -29,7 +29,9 @@ class Slider : ConstraintLayout {
   private var suffix = ""
   private var maxSuffix = ""
   private var showFloatingValues = false
-  private var ptFloatingValue = Paint()
+  private var ptFloatingValue = Paint().apply{
+    isAntiAlias = true
+  }
 
   private var conversionFactor: Float? = null
   private var conversionMinValue: Int? = null
